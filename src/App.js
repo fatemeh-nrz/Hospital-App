@@ -1,24 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
-
+import { Fragment } from 'react';
+import LoginForm from './LoginForm';
+import MainContent from './MainContent';
+import { BrowserRouter ,Route,Routes} from 'react-router-dom';
+import Container from './ContainerRouter';
+import SideNav from './SideNav';
+import ListBimar from './listBimar';
+import SabtBimar from './sabtBimar';
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <BrowserRouter>
+      <Routes>
+      <Route path="/" element={<Container />} />
+      <Route path="LoginForm" element={<LoginForm />} />
+      <Route path="MainContent" element={<MainContent />} />
+      <Route path="ListBimar" element={<ListBimar />} />
+      <Route path="SabtBimar" element={<SabtBimar />} />
+      {/* <Route path="blogs" element={<Blogs />} /> */}
+</Routes>
+</BrowserRouter>
+ 
+
+ 
+ 
   );
 }
 

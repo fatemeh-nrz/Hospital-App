@@ -1,18 +1,33 @@
+*{
+  direction: rtl;
+  font-family: ravi;
+  
+}
+
+body{
+/* background-image: url("https://laleh-hospital.com/Portals/0/LayerGalleryPro/uploads/2024/5/13/IMG_3080.JPG"); */
+
+
+  
+}
+@font-face {
+  font-family: ravi;
+  src: url(./font/BYekan.ttf);
+}
 .App {
   text-align: center;
+
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -36,3 +51,231 @@
     transform: rotate(360deg);
   }
 }
+
+/* ///////////////////////////////////////side nav */
+.sideNavContainer{
+  width:100px ;
+}
+.sidenav {
+  height: 100%;
+  width: 180px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background: #00bf8f;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #001510, #00bf8f);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #001510, #00bf8f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  overflow-x: hidden;
+  padding-top: 40px;
+
+}
+
+.sidenav div {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #f6f4f4;
+  /* display: block; */
+  display: flex;
+  flex-direction: row;
+  /* font-size: larger; */
+  cursor: pointer;
+}
+.sidenav a{
+  text-decoration: none;
+}
+.sidenav img{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  display: flex;
+ margin-right: 40px;
+ margin-top: -20px;
+}
+
+.fa-user-plus{
+  margin-right: 15px;
+}
+.fa-list{
+  margin-right: 48px;
+}
+.sidenav .listBimar:hover {
+background-color: #7d7d7e;
+border-radius: 20px;
+}
+
+.sidenav .sabtBimar:hover{
+  background-color: #c9c9ca;
+  border-radius: 20px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+/* ////////////////////loginForm/////////// */
+.login_form{
+  background: rgb(63,67,251);
+background: radial-gradient(circle, rgba(63,67,251,1) 0%, rgba(252,70,178,0.8351540445279675) 100%); 
+  padding: 10px;
+  color: beige;
+  border-radius: 20px;
+margin-right: 10px;
+}
+.login_form img{
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 1px solid wheat;
+  display: flex;
+margin-right: 120px;
+}
+.login_form button{
+  background-color: rgb(156, 4, 60);
+  color: beige;
+  width: 100px;
+}
+
+/* //////////////////listBimaran */
+
+
+/* ///////sabtBimar/////// */
+.title_sabt_bimar{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+
+}
+
+.sabt_bimar{
+  background-color: rgb(29, 109, 179);
+ color: antiquewhite;
+ margin-top: 130px;
+ border-radius: 15px;
+ display: block;
+}
+.sabt_bimar label{
+ width: 110px;
+}
+.sabt_bimar input{
+width: 360px;
+}
+.sabt_bimar button {
+width: 200px;
+background-color: forestgreen;
+font-size: large;
+}
+.title_list_bimaran{
+  text-align: center;
+}
+
+/* //////////////////////////////carousel/////////////// */
+.containerCarousel {
+  position: relative;
+  width: 320px;
+  margin: 100px auto 0 auto;
+  perspective: 1000px;
+ 
+  margin-right: 600px;
+
+}
+
+.carousel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation: rotate360 60s infinite forwards linear;
+}
+
+.carousel__face {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  top: 20px;
+  left: 10px;
+  right: 10px;
+  background-size: cover;
+  box-shadow: inset 0 0 0 2000px rgba(0, 47, 200, 0.2);
+  display: flex;
+  border-radius: 50px 0 50px 0;
+}
+
+img {
+margin: 20px;
+width: 400px;
+height: 200px;
+border-radius: 50px;
+}
+.img_logo_container{
+ margin-right: 550px;
+ width: 400px;
+ height: 120px;
+ margin-bottom: -100px;
+ /* margin-top: -10px; */
+}
+.img_logo_container_list_bimaran{
+ width: 400px;
+ height: 130px;
+ margin-right: 380px;
+}
+
+.img_logo_container_sabt_bimar{
+  margin-right: 320px;
+  width: 400px;
+ height: 120px;
+ /* margin-bottom: -10px; */
+ margin-top: -190px;
+}
+.carousel__face:nth-child(1) {
+  transform: rotateY(0deg) translateZ(430px);
+
+}
+
+.carousel__face:nth-child(2) {
+
+  transform: rotateY(40deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(3) {
+
+  transform: rotateY(80deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(4) {
+
+  transform: rotateY(120deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(5) {
+
+  transform: rotateY(160deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(6) {
+  transform: rotateY(200deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(7) {
+
+  transform: rotateY(240deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(8) {
+
+  transform: rotateY(280deg) translateZ(430px);
+}
+
+
+@keyframes rotate360 {
+  from {
+    transform: rotateY(0deg);
+  }
+
+  to {
+    transform: rotateY(-360deg);
+  }
+}
+/* //////////////////////////////carousel/////////////// */
